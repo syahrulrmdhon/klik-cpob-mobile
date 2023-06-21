@@ -1,4 +1,4 @@
-package com.example.klikcpobmobile
+package com.ditwasprod.klikcpobmobile
 
 import org.junit.Test
 

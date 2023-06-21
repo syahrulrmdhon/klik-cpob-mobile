@@ -1,4 +1,4 @@
-package com.example.klikcpobmobile
+package com.ditwasprod.klikcpobmobile.kg
 
 import android.content.Intent
 import android.os.Bundle
