@@ -1,6 +1,7 @@
 package com.ditwasprod.klikcpobmobile.kg
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebChromeClient
@@ -12,6 +13,12 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
+    override fun onBackPressed() {
+        val webview : WebView? = findViewById(R.id.web_login)
+        if (webview?.canGoBack() == true) {
+            webview?.goBack();
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
