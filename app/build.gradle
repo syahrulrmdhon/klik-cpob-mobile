@@ -11,8 +11,8 @@ android {
         applicationId "com.ditwasprod.klikcpobmobile.kg"
         minSdk 23
         targetSdk 33
-        versionCode 10200
-        versionName "1.2"
+        versionCode 10210
+        versionName "1.2.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
