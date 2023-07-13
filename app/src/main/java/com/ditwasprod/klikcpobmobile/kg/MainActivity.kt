@@ -15,8 +15,23 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         val webview : WebView? = findViewById(R.id.web_login)
+        val progressbar : ProgressBar? = findViewById(R.id.progressBar)
+
         if (webview?.canGoBack() == true) {
             webview?.goBack();
+            progressbar?.visibility = View.VISIBLE;
+            webview?.webChromeClient = object : WebChromeClient() {
+                override fun onProgressChanged(view: WebView, progress: Int) {
+                    setProgress(progress * 100) //Make the bar disappear after URL is loaded
+
+                    // Return the app name after finish loading
+                    if (progress == 80) {
+                        progressbar?.visibility = View.GONE;
+                    }
+                }
+            }
+        } else {
+            finishAffinity()
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
