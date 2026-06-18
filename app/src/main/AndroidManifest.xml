@@ -28,7 +28,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="KLIK CPOB Mobile" />
+            android:label="KLIK CPOB Mobile"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
     </application>
 
 </manifest>
